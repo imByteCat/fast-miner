@@ -5,7 +5,7 @@ POOL="xmr.f2pool.com:13531"
 USER="42tqjNBzQjCZA3aGq4v5rha6NsXgGfSEyTxoScjhEPZq5woPsydEWcC8sHiAbKueHnDvaJmj2F77fKNq1f4ok2LEPwJYB2s"
 PASSWORD="x"
 
-PRIORITY=5  # set process priority (0 idle, 2 normal to 5 highest)
+PRIORITY=4  # set process priority (0 idle, 2 normal to 5 highest)
 DONATE=1  # donate level, default 5%% (5 minutes in 100 minutes)
 BACKGROUND=false  # run the miner in the background
 
