@@ -7,7 +7,7 @@ PASSWORD="x"
 
 PRIORITY=4  # set process priority (0 idle, 2 normal to 5 highest)
 DONATE=1  # donate level, default 5%% (5 minutes in 100 minutes)
-BACKGROUND=true  # run the miner in the background
+BACKGROUND=false  # run the miner in the background
 
 WORKER=$(date "+%Y%m%d%H%M%S")
 
