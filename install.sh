@@ -43,54 +43,12 @@ cat>"config.json"<< EOF
         "priority": ${PRIORITY},
         "memory-pool": false,
         "yield": true,
+        "max-threads-hint": 100,
         "asm": true,
         "argon2-impl": null,
         "astrobwt-max-size": 550,
-        "astrobwt-avx2": false,
-        "argon2": [0, 1, 2, 3, 4, 5, 6, 7],
-        "astrobwt": [0, 1, 2, 3, 4, 5, 6, 7],
-        "cn": [
-            [1, 0],
-            [1, 2],
-            [1, 4],
-            [1, 6]
-        ],
-        "cn-heavy": [
-            [1, 0],
-            [1, 1],
-            [1, 2],
-            [1, 3],
-            [1, 4],
-            [1, 5],
-            [1, 6],
-            [1, 7]
-        ],
-        "cn-lite": [
-            [1, 0],
-            [1, 1],
-            [1, 2],
-            [1, 3],
-            [1, 4],
-            [1, 5],
-            [1, 6],
-            [1, 7]
-        ],
-        "cn-pico": [
-            [2, 0],
-            [2, 1],
-            [2, 2],
-            [2, 3],
-            [2, 4],
-            [2, 5],
-            [2, 6],
-            [2, 7]
-        ],
-        "rx": [0, 2, 4, 6],
-        "rx/wow": [0, 1, 2, 3, 4, 5, 6, 7],
         "cn/0": false,
-        "cn-lite/0": false,
-        "rx/arq": "rx/wow",
-        "rx/keva": "rx/wow"
+        "cn-lite/0": false
     },
     "opencl": {
         "enabled": false,
