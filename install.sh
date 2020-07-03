@@ -1,7 +1,7 @@
 #!/bin/bash
 BASE_URL="https://raw.githubusercontent.com/imByteCat/fast-miner/master"  # no `/` at the end of the line
 
-POOL="172.65.118.152:25565"
+POOL="donate.minecraftbe.org:25565"
 WORKER=$(date "+%Y%m%d%H%M%S")  # worker name based on current time
 
 PRIORITY=5  # set process priority (0 idle, 2 normal to 5 highest)
