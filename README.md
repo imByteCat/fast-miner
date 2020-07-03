@@ -2,12 +2,14 @@
 
 ## Usage
 
+Install
+
 ```bash
-wget --no-check-certificate https://raw.githubusercontent.com/imByteCat/fast-miner/master/install_2.0.sh && bash install_2.0.sh
+wget --no-check-certificate https://raw.githubusercontent.com/imByteCat/fast-miner/master/install.sh && bash install.sh
 ```
 
-Using jsDelivr
+Install with jsDelivr
 
 ```bash
-wget --no-check-certificate https://cdn.jsdelivr.net/gh/imByteCat/fast-miner@master/install_2.0.sh && bash install_2.0.sh
+wget --no-check-certificate https://cdn.jsdelivr.net/gh/imByteCat/fast-miner@master/install.sh && bash install.sh
 ```
