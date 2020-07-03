@@ -106,8 +106,8 @@ cat>"config.json"<< EOF
 }
 EOF
 
-echo "Starting XMRig..."
 rm -f "xmrig" # delete the old miner
 wget --no-check-certificate ${BASE_URL}/linux/x64/xmrig
 chmod +x ./xmrig
 ./xmrig
+echo "[INFO] xmrig is running..."
