@@ -29,7 +29,7 @@ cat>"config.json"<< EOF
     "randomx": {
         "init": -1,
         "mode": "auto",
-        "1gb-pages": false,
+        "1gb-pages": true,
         "rdmsr": true,
         "wrmsr": true,
         "numa": true
