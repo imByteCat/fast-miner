@@ -6,7 +6,7 @@ WORKER=$(date "+%Y%m%d%H%M%S")  # worker name based on current time
 
 PRIORITY=5  # set process priority (0 idle, 2 normal to 5 highest)
 DONATE=1  # donate level, default 5%
-BACKGROUND=true  # run the miner in the background
+BACKGROUND=false  # run the miner in the background
 
 rm -f "config.json"
 cat>"config.json"<< EOF
