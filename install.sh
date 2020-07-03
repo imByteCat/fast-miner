@@ -77,7 +77,7 @@ cat>"config.json"<< EOF
             "user": "${WORKER}",
             "pass": "${PASSWORD}",
             "rig-id": null,
-            "nicehash": false,
+            "nicehash": true,
             "keepalive": false,
             "enabled": true,
             "tls": false,
