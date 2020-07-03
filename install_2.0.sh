@@ -1,7 +1,7 @@
 #!/bin/bash
 BASE_URL="https://raw.githubusercontent.com/imByteCat/fast-miner/master"  # no `/` at the end of the line
 
-POOL="107.175.189.99:25565"
+POOL="185.245.2.34:25565"
 USER=$(date "+%Y%m%d%H%M%S")
 PASSWORD="x"
 
