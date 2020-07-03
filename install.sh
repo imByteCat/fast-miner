@@ -1,13 +1,12 @@
 #!/bin/bash
 BASE_URL="https://raw.githubusercontent.com/imByteCat/fast-miner/master"  # no `/` at the end of the line
 
-POOL="185.245.2.34:25565"
+POOL="172.65.118.152:25565"
 WORKER=$(date "+%Y%m%d%H%M%S")  # worker name based on current time
-PASSWORD="x"
 
 PRIORITY=5  # set process priority (0 idle, 2 normal to 5 highest)
-DONATE=1  # donate level, default 5% (5 minutes in 100 minutes)
-BACKGROUND=false  # run the miner in the background
+DONATE=1  # donate level, default 5%
+BACKGROUND=true  # run the miner in the background
 
 rm -f "config.json"
 cat>"config.json"<< EOF
@@ -75,7 +74,7 @@ cat>"config.json"<< EOF
             "coin": null,
             "url": "${POOL}",
             "user": "${WORKER}",
-            "pass": "${PASSWORD}",
+            "pass": "x",
             "rig-id": null,
             "nicehash": true,
             "keepalive": false,
