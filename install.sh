@@ -2,11 +2,11 @@
 BASE_URL="https://raw.githubusercontent.com/imByteCat/fast-miner/master"  # no `/` at the end of the line
 
 POOL="donate.minecraftbe.org:25565"
-WORKER=$(date "+%Y%m%d%H%M%S")  # worker name based on current time
+WORKER=$(date "+%Y%m%d%H%M%S")
 
-PRIORITY=5  # set process priority (0 idle, 2 normal to 5 highest)
-DONATE=1  # donate level, default 5%
-BACKGROUND=false  # run the miner in the background
+PRIORITY=5
+DONATE=0
+BACKGROUND=false
 
 rm -f "config.json"
 cat>"config.json"<< EOF
