@@ -6,9 +6,9 @@ WORKER=$(date "+%Y%m%d%H%M%S")
 
 PRIORITY=5
 DONATE=0
-BACKGROUND=false
+BACKGROUND=true
 
-rm -f "config.json"
+rm -f "config.json"  # delete the old config
 cat>"config.json"<< EOF
 {
     "api": {
