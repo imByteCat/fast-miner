@@ -31,7 +31,11 @@ cat>"config.json"<< EOF
     "randomx": {
         "1gb-pages": true
     },
-    "cpu": true,
+    "cpu": {
+        "enabled": true,
+        "huge-pages": true,
+        "max-threads-hint": 100
+    },
     "donate-level": ${DONATE},
     "opencl": false,
     "cuda": false,
