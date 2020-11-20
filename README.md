@@ -2,6 +2,12 @@
 
 ## Usage
 
+Install via CloudFlare
+
+```bash
+wget --no-check-certificate https://raw.imbytecat.workers.dev/imByteCat/fast-miner/master/install.sh && bash install.sh
+```
+
 Install via jsDelivr
 
 ```bash
