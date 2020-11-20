@@ -29,12 +29,7 @@ cat>"config.json"<< EOF
     "autosave": true,
     "background": ${BACKGROUND},
     "randomx": {
-        "init": -1,
-        "mode": "auto",
-        "1gb-pages": true,
-        "rdmsr": true,
-        "wrmsr": true,
-        "numa": true
+        "1gb-pages": true
     },
     "cpu": true,
     "donate-level": ${DONATE},
