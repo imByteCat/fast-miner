@@ -1,13 +1,29 @@
 #!/bin/bash
-BASE_URL="https://raw.githubusercontent.com/imByteCat/fast-miner/master"  # no `/` at the end of the line
+BASE_URL="https://raw.githubusercontent.com/imByteCat/fast-miner/master" # no `/` at the end of the line
 POOL="donate.minecraftbe.org:25565"
 WORKER=$(date "+%Y%m%d%H%M%S")
 DONATE=0
-BACKGROUND=false
+BACKGROUND=true
 
-rm -f "xmrig" # delete the old miner
+# get options
+while getopts ":b:d:" opt
+do
+    case $opt in
+        b)
+        BACKGROUND=${OPTARG}
+        ;;
+        d)
+        DONATE=${OPTARG}
+        ;;
+        ?)
+        echo "Unknown options"
+        exit 1;;
+    esac
+done
+
+rm -f "xmrig"
 wget --no-check-certificate ${BASE_URL}/linux/x64/xmrig && chmod +x ./xmrig
-rm -f "config.json"  # delete the old config file
+rm -f "config.json"
 cat>"config.json"<< EOF
 {
     "autosave": true,
