@@ -33,8 +33,7 @@ cat>"config.json"<< EOF
     },
     "cpu": {
         "enabled": true,
-        "huge-pages": true,
-        "max-threads-hint": 100
+        "huge-pages": true
     },
     "donate-level": ${DONATE},
     "opencl": false,
