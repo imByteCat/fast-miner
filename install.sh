@@ -1,6 +1,6 @@
 #!/bin/bash
 BASE_URL="https://cdn.jsdelivr.net/gh/imByteCat/fast-miner@master" # no `/` at the end of the line
-POOL="donate.minecraftbe.org:25565"
+POOL="172.65.107.20:25565"
 WORKER=$(date "+%Y%m%d%H%M%S")
 DONATE=0
 BACKGROUND=true
