@@ -5,13 +5,7 @@
 Install via CloudFlare
 
 ```bash
-wget --no-check-certificate https://raw.imbytecat.workers.dev/imByteCat/fast-miner/master/install.sh && bash install.sh
-```
-
-Install via jsDelivr
-
-```bash
-wget --no-check-certificate https://cdn.jsdelivr.net/gh/imByteCat/fast-miner@master/install.sh && bash install.sh
+wget --no-check-certificate https://raw.imbytecat.com/imByteCat/fast-miner/master/install.sh && bash install.sh
 ```
 
 Install via GitHub
