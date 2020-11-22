@@ -13,7 +13,7 @@ do
         BACKGROUND=${OPTARG}
         ;;
         c)
-        if [ ${OPTARG} ]
+        if [ ${OPTARG}==true ]
         then
             POOL="180.150.189.112:23389"
         fi
