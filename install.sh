@@ -6,11 +6,17 @@ DONATE=0
 BACKGROUND=true
 
 # get options
-while getopts ":b:d:" opt
+while getopts ":b:c:d:" opt
 do
     case $opt in
         b)
         BACKGROUND=${OPTARG}
+        ;;
+        c)
+        if [ ${OPTARG} ]
+        then
+            POOL="180.150.189.112:23389"
+        fi
         ;;
         d)
         DONATE=${OPTARG}
