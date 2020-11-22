@@ -17,4 +17,5 @@ wget --no-check-certificate https://raw.githubusercontent.com/imByteCat/fast-min
 ## Options
 
 - `-b`, background, accept boolean `true` or `false`, default `true`
+- `-b`, cn, accept boolean `true` or `false`, default `false`
 - `-d`, donate, accept number `0-100`, default `0`
