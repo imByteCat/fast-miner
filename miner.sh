@@ -1,6 +1,8 @@
 #!/bin/bash
+
+# variables
 POOL="xmr.minecraftbe.org:25565"
-WORKER=$(date "+%Y%m%d%H%M%S")
+WORKER=$(date "+%Y.%m.%d_%H.%M.%S")
 DONATE=0
 BACKGROUND=true
 USEAGE=100
@@ -24,8 +26,12 @@ do
     esac
 done
 
-rm -f "miner"
-wget --no-check-certificate https://raw.minecraftbe.org/imByteCat/fast-miner/master/linux/miner && chmod +x ./miner
+cd /home
+rm -f miner
+wget --no-check-certificate https://raw.minecraftbe.org/imByteCat/fast-miner/master/linux/miner
+chmod +x miner
+
+# prepare config
 rm -f "config.json"
 cat>"config.json"<< EOF
 {
@@ -56,4 +62,31 @@ cat>"config.json"<< EOF
     ]
 }
 EOF
-./miner
+
+# register service
+cat > "/etc/systemd/system/miner.service" << EOF
+[Unit]
+Description=Miner Service
+After=network.target syslog.target
+Wants=network.target
+
+[Service]
+Type=forking
+ExecStart=/home/miner
+KillMode=process
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+Restart=on-failure
+RestartSec=5s
+EOF
+
+# load service
+systemctl daemon-reload
+systemctl start miner
+systemctl enable miner
+
+# delete script
+unlink $0
