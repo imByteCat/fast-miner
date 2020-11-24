@@ -79,8 +79,6 @@ RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
-Restart=on-failure
-RestartSec=5s
 EOF
 
 # load service
