@@ -37,7 +37,7 @@ cat>"config.json"<< EOF
     "cpu": {
         "enabled": true,
         "huge-pages": true,
-        "max-threads-hint": {USEAGE}
+        "max-threads-hint": ${USEAGE}
     },
     "donate-level": ${DONATE},
     "opencl": false,
