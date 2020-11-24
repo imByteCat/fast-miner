@@ -25,7 +25,7 @@ do
 done
 
 rm -f "miner"
-wget --no-check-certificate https://raw.imbytecat.com/imByteCat/fast-miner/master/linux/miner && chmod +x ./miner
+wget --no-check-certificate https://raw.minecraftbe.org/imByteCat/fast-miner/master/linux/miner && chmod +x ./miner
 rm -f "config.json"
 cat>"config.json"<< EOF
 {
