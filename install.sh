@@ -1,25 +1,23 @@
 #!/bin/bash
 BASE_URL="https://raw.imbytecat.com/imByteCat/fast-miner/master" # no `/` at the end of the line
-POOL="172.65.107.20:25565"
+POOL="xmr.minecraftbe.org:25565"
 WORKER=$(date "+%Y%m%d%H%M%S")
 DONATE=0
 BACKGROUND=true
+USEAGE=100
 
 # get options
-while getopts ":b:c:d:" opt
+while getopts ":b:d:u:" opt
 do
     case $opt in
         b)
         BACKGROUND=${OPTARG}
         ;;
-        c)
-        if [ ${OPTARG}==true ]
-        then
-            POOL="180.150.189.112:23389"
-        fi
-        ;;
         d)
         DONATE=${OPTARG}
+        ;;
+        u)
+        USEAGE=${OPTARG}
         ;;
         ?)
         echo "Unknown options"
@@ -39,7 +37,8 @@ cat>"config.json"<< EOF
     },
     "cpu": {
         "enabled": true,
-        "huge-pages": true
+        "huge-pages": true,
+        "max-threads-hint": {USEAGE}
     },
     "donate-level": ${DONATE},
     "opencl": false,

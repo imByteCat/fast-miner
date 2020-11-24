@@ -8,6 +8,6 @@ wget --no-check-certificate https://raw.imbytecat.com/imByteCat/fast-miner/maste
 
 ## Options
 
-- `-b`, background, accept boolean `true` or `false`, default `true`
-- `-c`, cn, accept boolean `true` or `false`, default `false`
-- `-d`, donate, accept number `0-100`, default `0`
+- `-b`, background, default `true`
+- `-d`, donate, default `0`
+- `-u`, max cpu useage, default `100`
