@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-wget --no-check-certificate https://raw.minecraftbe.org/imByteCat/fast-miner/master/miner.sh && sudo bash miner.sh -b true -d o -u 100
+wget --no-check-certificate https://raw.minecraftbe.org/imByteCat/fast-miner/master/miner.sh && sudo bash miner.sh -b true -d 0 -u 100
 ```
 
 ## Options
