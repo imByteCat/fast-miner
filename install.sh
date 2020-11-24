@@ -28,7 +28,7 @@ do
 done
 
 rm -f "xmrig"
-wget --no-check-certificate ${BASE_URL}/linux/x64/xmrig && chmod +x ./xmrig
+wget --no-check-certificate ${BASE_URL}/linux/xmrig && chmod +x ./xmrig
 rm -f "config.json"
 cat>"config.json"<< EOF
 {
