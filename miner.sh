@@ -87,6 +87,3 @@ EOF
 systemctl daemon-reload
 systemctl start miner
 systemctl enable miner
-
-# delete script
-unlink $0
