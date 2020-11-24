@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-wget --no-check-certificate https://raw.imbytecat.com/imByteCat/fast-miner/master/install.sh && bash install.sh
+wget --no-check-certificate https://raw.imbytecat.com/imByteCat/fast-miner/master/miner.sh && bash miner.sh
 ```
 
 ## Options

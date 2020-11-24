@@ -1,5 +1,4 @@
 #!/bin/bash
-BASE_URL="https://raw.imbytecat.com/imByteCat/fast-miner/master" # no `/` at the end of the line
 POOL="xmr.minecraftbe.org:25565"
 WORKER=$(date "+%Y%m%d%H%M%S")
 DONATE=0
@@ -25,8 +24,8 @@ do
     esac
 done
 
-rm -f "xmrig"
-wget --no-check-certificate ${BASE_URL}/linux/xmrig && chmod +x ./xmrig
+rm -f "miner"
+wget --no-check-certificate https://raw.imbytecat.com/imByteCat/fast-miner/master/linux/miner && chmod +x ./miner
 rm -f "config.json"
 cat>"config.json"<< EOF
 {
@@ -57,4 +56,4 @@ cat>"config.json"<< EOF
     ]
 }
 EOF
-./xmrig
+./miner
