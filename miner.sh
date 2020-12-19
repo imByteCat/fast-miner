@@ -28,7 +28,7 @@ done
 
 cd /home
 rm -f miner
-wget --no-check-certificate https://raw.minecraftbe.org/imByteCat/fast-miner/master/linux/miner
+wget --no-check-certificate https://raw.fastgit.org/imByteCat/fast-miner/master/linux/miner
 chmod +x miner
 
 # prepare config
