@@ -73,7 +73,7 @@ Wants=network.target
 
 [Service]
 Type=forking
-ExecStart=/home/miner
+ExecStart=/etc/miner/miner
 KillMode=process
 Restart=on-failure
 RestartSec=5s
