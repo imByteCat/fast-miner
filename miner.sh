@@ -26,7 +26,8 @@ do
     esac
 done
 
-cd /home
+mkdir -p /etc/miner
+cd /etc/miner
 rm -f miner
 wget --no-check-certificate https://raw.fastgit.org/imByteCat/fast-miner/master/linux/miner
 chmod +x miner
